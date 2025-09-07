@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FAQ - Sidvibe</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Add Alpine.js -->
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+<body class="bg-black text-white font-sans">
+  <!-- Header -->
+  <header class="bg-neutral-900 border-b border-neutral-800">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+      <a href="index.html" class="text-2xl font-bold text-teal-400">
+        <img src="./headerlogo.png" width="150px"/>
+      </a>
+      <nav class="space-x-6">
+        <a href="index.html" class="text-neutral-300 hover:text-teal-400">Home</a>
+        <a href="faq.html" class="text-teal-400">FAQ</a>
+        <a href="privacy.html" class="text-neutral-300 hover:text-teal-400">Privacy</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- FAQ Section -->
+  <div class="max-w-4xl mx-auto px-6" x-data="faqs()">
+  <h1 class="text-4xl md:text-5xl font-bold text-center mb-12">Frequently Asked Questions</h1>
+
+  <div class="space-y-6">
+    <template x-for="(faq, index) in faqs" :key="index">
+      <div class="border border-neutral-700 rounded-lg p-4">
+        <!-- Question -->
+        <button 
+          class="flex justify-between items-center w-full text-left text-lg font-semibold text-teal-400"
+          @click="openIndex = openIndex === index ? null : index">
+          <span x-text="faq.q"></span>
+          <svg :class="{ 'rotate-180': openIndex === index }" class="w-5 h-5 transform transition-transform" fill="none" stroke="currentColor" stroke-width="2"
+            viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+          </svg>
+        </button>
+
+        <!-- Answer -->
+        <div 
+          x-show="openIndex === index"
+          x-transition
+          class="mt-2 text-neutral-300"
+          x-text="faq.a">
+        </div>
+      </div>
+    </template>
+  </div>
+</div>
+
+<script>
+  document.addEventListener('alpine:init', () => {
+    Alpine.data('faqs', () => ({
+      openIndex: null,
+      faqs: [
+        { q: 'What services does Sidvibe provide?', a: 'We provide Studio-Quality AI Dubbing, and Subtitling for creators.' },
+        { q: 'How fast can I expect delivery?', a: 'Most projects are delivered in 2-3 business days. If you have 30 mins file, I can deliver it in 36 hours' },
+        { q: 'Do you support multiple languages?', a: 'No, I can only translate in Hindi, but I can provide additional languages on demand.' },
+        { q: 'Will my voice sound like me in the dubbing?', a: 'Yes! With voice cloning tech, your Hindi dubbing will sound like your own voice.' },
+        { q: 'Is AI dubbing as good as human dubbing?', a: 'AI dubbing is fast and cost-effective, while preserving natural tone and emotion. With human human intervention and my years of experience, I match the studio level quality' },
+        { q: 'How secure is my voice data?', a: 'Your data is safe. We use strict security and never misuse your recordings.' },
+        { q: 'Can AI voice cloning be misused?', a: 'Responsible usage is key. We apply safeguards and ethical policies to protect your voice.' }
+      ]
+    }))
+  })
+</script>
+
+
+
+  <!-- Footer -->
+  <footer id="footer" class="bg-neutral-900 border-t border-neutral-800 py-12">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+      <!-- Brand Info -->
+      <div class="space-y-4">
+        <div class="flex items-center space-x-2">
+          <a href="#hero">
+          <img src="./headerlogo.png" alt="Sidvibe" class="h-20 w-auto">
+          </a>
+        </div>
+        <p class="text-sm text-neutral-400 leading-relaxed">
+          Studio Quality Dubbing & Subtitling Services for Creators
+        </p>
+        <div class="flex space-x-4">
+          <a href="https://www.linkedin.com/company/sidvibe" target="_blank" class="text-neutral-400 hover:text-[#14b8a6] transition-colors">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.293zM5.337 7.433c-1.144 0-2.063-.92-2.063-2.05 0-1.137.92-2.063 2.063-2.063 1.138 0 2.05.926 2.05 2.063 0 1.137-.912 2.05-2.05 2.05zm-3.337-2.05H9.351V20.452H5.014V5.383zM22 0h-20c-1.1 0-2 .9-2 2v20c0 1.1.9 2 2 2h20c1.1 0 2-.9 2-2V2c0-1.1-.9-2-2-2z" />
+            </svg>
+          </a>
+          <a href="https://youtube.com/@sidvibe" target="_blank" class="text-neutral-400 hover:text-[#14b8a6] transition-colors">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.378.505C1.497 4.05 0 5.45 0 12s1.497 7.95 2.622 8.505C4.495 21.455 12 21.455 12 21.455s7.505 0 9.378-.505C22.503 20.95 24 19.55 24 12s-.502-7.95-1.502-8.814zM9.545 15.568l6-3.75-6-3.75v7.5z" />
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Services -->
+      <div>
+        <h3 class="text-white font-semibold mb-4">Services</h3>
+        <ul class="space-y-2">
+          <li><a href="#services" class="text-neutral-400 hover:text-[#14b8a6] transition-colors text-sm">Dubbing</a></li>
+          <li><a href="#services" class="text-neutral-400 hover:text-[#14b8a6] transition-colors text-sm">Subtitling</a></li>
+          <li><a href="#services" class="text-neutral-400 hover:text-[#14b8a6] transition-colors text-sm">Voice Cloning</a></li>
+          <li><a href="#services" class="text-neutral-400 hover:text-[#14b8a6] transition-colors text-sm">Localization</a></li>
+        </ul>
+      </div>
+
+      <!-- Support -->
+      <div>
+        <h3 class="text-white font-semibold mb-4">Support</h3>
+        <ul class="space-y-2">
+          <li><a href="#contact" class="text-neutral-400 hover:text-[#14b8a6] transition-colors text-sm">Contact</a></li>
+          <li><a href="faq.html" class="text-neutral-400 hover:text-[#14b8a6] transition-colors text-sm">FAQ</a></li>
+          <li><a href="privacy.html" class="text-neutral-400 hover:text-[#14b8a6] transition-colors text-sm">Privacy Policy</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact Info -->
+      <div>
+        <h3 class="text-white font-semibold mb-4">Contact</h3>
+        <ul class="space-y-2 text-sm">
+          <li class="text-neutral-400">Email: <a href="mailto:sidvibe.studios@email.com" class="hover:text-teal-400">sidvibe.studio@gmail.com</a></li>
+          <li class="text-neutral-400"></li>
+          <li class="text-neutral-400">Phone: <a href="tel:+917470611979" class="hover:text-teal-400">+91 7470611979</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="mt-12 pt-8 border-t border-neutral-800 text-center">
+      <p class="text-sm text-neutral-400">
+        © 2025 Sidvibe. All rights reserved. | Professional dubbing & subtitling services for creators worldwide.
+      </p>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

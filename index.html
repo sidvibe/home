@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
    <head>
@@ -30,111 +28,31 @@
       <script src="https://cdn.tailwindcss.com"></script>
       <script defer src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.45.1/apexcharts.min.js"></script>
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-      
-      <!-- Project-specific styles -->
-      <style>
-        /* Base styles */
-        html {
-          scroll-behavior: smooth;
-        }
-
-        :root {
-          --primary-color: #14b8a6;
-          --secondary-color: #ffffff;
-          --accent-color: ;
-        }
-
-        /* Strict no-scrollbar rules */
-        * {
-          -ms-overflow-style: none !important;  /* IE and Edge */
-          scrollbar-width: none !important;     /* Firefox */
-        }
-        *::-webkit-scrollbar {
-          display: none !important;             /* Chrome, Safari and Opera */
-        }
-
-        /* Typography */
-        h1, h2, h3, h4, h5, h6 {
-          font-family: Inter, Inter, system-ui, sans-serif;
-        }
-        body {
-          font-family: Roboto, Inter, system-ui, sans-serif;
-        }
-
-        /* Interactive elements */
-        .interactive-element {
-          transition: all 0.3s ease;
-        }
-        .interactive-element:hover {
-          transform: translateY(-2px);
-        }
-
-        /* Custom scrollbar */
-        ::-webkit-scrollbar {
-          width: 8px;
-          height: 8px;
-        }
-        ::-webkit-scrollbar-track {
-          background: #f1f1f1;
-        }
-        ::-webkit-scrollbar-thumb {
-          background: #888;
-          border-radius: 4px;
-        }
-        ::-webkit-scrollbar-thumb:hover {
-          background: #555;
-        }
-
-        /* Animations */
-        @keyframes fadeIn {
-          from { opacity: 0; }
-          to { opacity: 1; }
-        }
-        .fade-in {
-          animation: fadeIn 0.5s ease-in-out;
-        }
-      </style>
+      <link rel="stylesheet" href="styles.css"/>
 
       <!-- Dynamic Meta Tags -->
-      <meta name="description" content="">
-      <meta name="keywords" content="">
-      <meta name="robots" content="index,follow">
-      <meta property="og:title" content="">
-      <meta property="og:description" content="">
-      <meta property="og:image" content="">
+      <!-- Site Description & SEO -->
+      <meta name="description"
+      content="Sidvibe offers studio-quality AI dubbing, voice cloning, and subtitling services for creators—enabling seamless localization and emotional delivery in 20+ languages. Fast turnaround, human-tuned voiceovers, and crystal-clear subtitles." />
+      <meta name="keywords"
+      content="AI dubbing, voice cloning, subtitling services, content localization, studio-quality dubbing, creator voiceovers, multilingual subtitles, Hindi dubbing, YouTube dubbing, fast dubbing services" />
+      <meta name="robots" content="index,follow" />
+
+      <!-- Open Graph for Social Sharing -->
+      <meta property="og:title" content="Sidvibe — Studio-Quality Dubbing, Voice Cloning & Subtitling Services" />
+      <meta property="og:description"
+      content="Reach global audiences with Sidvibe’s human-tuned AI dubbing, voice cloning, and subtitling. Fast, emotive, and accurate localization in 20+ languages." />
+      <meta property="og:image" content="" />
+
       <meta property="og:type" content="website">
       <meta property="og:locale" content="en_US">
       <meta property="og:site_name" content="Sidvibe">
       
       <!-- Favicon -->
       <link rel="icon" type="image/x-icon" href="https://dms.mydukaan.io/original/webp/media/d6aa08aa-d32e-41a6-a84b-a6d709bb3561.png">
+      <!-- Animation -->
+      <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
-      <!-- Header Scripts -->
-      <script id="header-scripts">
-        // This script tag will be replaced with actual scripts.head content
-        if (window.scripts && window.scripts.head) {
-          document.getElementById('header-scripts').outerHTML = window.scripts.head;
-        }
-      </script>
-
-      <!-- Project Configuration -->
-      <script>
-        window.projectConfig = {
-          name: 'Sidvibe',
-          type: '',
-          settings: {
-            colors: {
-              primary: '#14b8a6',
-              secondary: '#ffffff',
-              accent: ''
-            },
-            fonts: {
-              primary: 'Inter',
-              secondary: 'Roboto'
-            }
-          }
-        };
-      </script>
    <style>
         [data-section-id] {
           display: none;
@@ -146,7 +64,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 </head>
-   <body class="antialiased text-gray-900 bg-white">
+   <body class="antialiased text-gray-900 bg-neutral-900">
       <!-- Skip to main content link for accessibility -->
       <a href="#main-content" 
          class="sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 focus:z-50 focus:p-4 focus:bg-white focus:text-black">
@@ -165,12 +83,16 @@
       
       <div class="hidden md:block">
         <div class="ml-10 flex items-baseline space-x-8">
-          <a href="#hero" class="text-neutral-300 hover:text-white px-3 py-2 text-sm font-medium transition-colors duration-300">Home</a>
-          <a href="#about" class="text-neutral-300 hover:text-white px-3 py-2 text-sm font-medium transition-colors duration-300">About</a>
-          <a href="#services" class="text-neutral-300 hover:text-white px-3 py-2 text-sm font-medium transition-colors duration-300">Services</a>
-          <a href="#portfolio" class="text-neutral-300 hover:text-white px-3 py-2 text-sm font-medium transition-colors duration-300">Portfolio</a>
-          <a href="#testimonials" class="text-neutral-300 hover:text-white px-3 py-2 text-sm font-medium transition-colors duration-300">Testimonials</a>
-          <a href="#contact" class="text-neutral-300 hover:text-white px-3 py-2 text-sm font-medium transition-colors duration-300">Contact</a>
+          <a href="#hero" class="text-neutral-300 hover:text-teal-400 px-3 py-2 text-sm font-medium transition-colors duration-300">Home</a>
+          <a href="#about" class="text-neutral-300 hover:text-teal-400 px-3 py-2 text-sm font-medium transition-colors duration-300">About</a>
+          <a href="#services" class="text-neutral-300 hover:text-teal-400 px-3 py-2 text-sm font-medium transition-colors duration-300">Services</a>
+          <a href="#portfolio" class="text-neutral-300 hover:text-teal-400 px-3 py-2 text-sm font-medium transition-colors duration-300">Portfolio</a>
+          <a href="#testimonials" class="text-neutral-300 hover:text-teal-400 px-3 py-2 text-sm font-medium transition-colors duration-300">Testimonials</a>
+          <a href="#contact">
+            <button class="nav-btn hover:scale-105">
+        Contact Us
+      </button>
+          </a>
         </div>
       </div>
       
@@ -195,47 +117,32 @@
     </div>
   </div>
 </nav>
-
-<script>
-  const menuToggle = document.getElementById('mobile-menu-btn');
-  const mobileMenu = document.getElementById('mobile-menu');
-  const openIcon = document.getElementById('menu-open-icon');
-  const closeIcon = document.getElementById('menu-close-icon');
-
-  menuToggle.addEventListener('click', () => {
-    mobileMenu.classList.toggle('hidden');
-    openIcon.classList.toggle('hidden');
-    closeIcon.classList.toggle('hidden');
-  });
-
-  // Auto-close menu when a link is clicked
-  document.querySelectorAll('#mobile-menu a').forEach(link => {
-    link.addEventListener('click', () => {
-      mobileMenu.classList.add('hidden');
-      openIcon.classList.remove('hidden');
-      closeIcon.classList.add('hidden');
-    });
-  });
-</script>
-
 <section id="hero" class="min-h-screen flex items-center justify-center relative bg-neutral-900 overflow-hidden">
   <div class="absolute inset-0 z-0">
-    <img src="https://images.unsplash.com/photo-1603201667493-4c2696de0b1f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2MzQ2fDB8MXxzZWFyY2h8MXx8d2VicGFnZSUyMHByb2Zlc3Npb25hbHxlbnwxfDB8fHwxNzU2OTU4OTA3fDA&ixlib=rb-4.1.0&q=80&w=1080" alt="Professional workspace with laptop" class="absolute inset-0 w-full h-full object-cover opacity-20" />
+    <img src="/josh-sorenson-LVmyjS0hxYU-unsplash.jpg" alt="Professional workspace with laptop" class="absolute inset-0 w-full h-full object-cover opacity-20" />
     <div class="absolute inset-0 bg-gradient-to-br from-neutral-900 via-neutral-900/80 to-teal-500/20"></div>
   </div>
   
   <div class="relative z-10 text-center max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-    <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-      Studio Quality Dubbing & <span class="text-teal-400">Subtitling</span> for Creators
+    <h1 class="text-4xl sm:text-5x1 md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
+      Studio Quality <span class="text-teal-400">Dubbing</span> for Creators
     </h1>
-    <p class="text-xl sm:text-2xl text-neutral-300 mb-8 max-w-2xl mx-auto">
-      Professional solutions for YouTubers and content creators
-    </p>
+    <div class="typewrap text-xl sm:text-1xl text-neutral-300 mb-8 max-w-2xl mx-auto" aria-label="Animated rotating text">
+    <span id="typed" class="typed-text" aria-live="polite"></span>
+    <span class="cursor" aria-hidden="true"></span>
+  </div>
+    <div class="mt-8 flex flex-row justify-center gap-2"> 
     <a href="#contact">
-      <button class="bg-teal-500 hover:bg-teal-400 text-black font-bold py-4 px-8 rounded-lg text-lg transition-all duration-300 transform hover:scale-105">
+      <button class="get-started bg-teal-500 hover:bg-teal-500 font-bold py-4 px-8 rounded-lg text-lg transition-all duration-300 transform hover:scale-105">
         Get Started
       </button>
     </a>
+    <a href="#portfolio">
+        <button class="action-button bg-white-500 hover:bg-white-400 text-black font-bold py-4 px-8 rounded-lg text-lg transition-all duration-300 transform hover:scale-105">
+        See in Action
+      </button>
+    </a>
+    </div>
   </div>
   
   <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2">
@@ -247,42 +154,42 @@
 <section id="about" class="py-20 bg-neutral-900">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="grid md:grid-cols-2 gap-12 items-center">
-      <div class="space-y-6">
-        <h2 class="text-4xl font-bold text-white">About</h2>
+      <div class="space-y-6" data-aos="fade-right" data-aos-once="false">
+        <h2 class="text-4xl font-bold text-white">Why <span class="text-teal-400">Sidvibe</span>?</h2>
         <p class="text-xl text-neutral-300 leading-relaxed">
-          Sidvibe delivers studio-quality dubbing and subtitling that transforms your content. We bridge language barriers with precision and emotion.
+          Sidvibe transforms your content into a seamless experience for Indian viewers, helping you reach a wider global audience. We blend AI voice technology with human expertise to preserve your creative intent and emotion.
         </p>
         <div class="space-y-4">
           <div class="flex items-start space-x-3">
             <div class="w-2 h-2 bg-teal-400 rounded-full mt-2"></div>
-            <p class="text-neutral-300">Professional-grade audio processing for crystal-clear results</p>
+            <p class="text-neutral-300">Studio-quality dubbing & subtitling with human oversight</p>
           </div>
           <div class="flex items-start space-x-3">
             <div class="w-2 h-2 bg-teal-400 rounded-full mt-2"></div>
-            <p class="text-neutral-300">Native voice actors with authentic cultural nuances</p>
+            <p class="text-neutral-300">Custom voices with cloning & emotion control for consistency</p>
           </div>
           <div class="flex items-start space-x-3">
             <div class="w-2 h-2 bg-teal-400 rounded-full mt-2"></div>
-            <p class="text-neutral-300">Lightning-fast turnaround without compromising quality</p>
+            <p class="text-neutral-300">Fast turnaround without compromising quality</p>
           </div>
         </div>
       </div>
       
-      <div class="relative">
-        <img src="https://images.unsplash.com/photo-1526242767279-2ad8d8271177?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2MzQ2fDB8MXxzZWFyY2h8MXx8Y3JlYXRpdmUlMjBzdHVkaW8lMjB3b3Jrc3BhY2V8ZW58MXwwfHx8MTc1Njk4NTM2Mnww&ixlib=rb-4.1.0&q=80&w=1080" alt="Creative studio workspace" class="rounded-lg w-full h-80 object-cover" />
+      <div class="relative" data-aos="fade-left" data-aos-once="false">
+        <img src="./dubbing.jpg" alt="Creative studio workspace" class="rounded-lg w-full h-80 object-cover" />
         
-        <div class="absolute -bottom-6 -right-6 hidden lg:block">
-          <img src="https://images.unsplash.com/photo-1752649937334-f5c3c2136b4f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2MzQ2fDB8MXxzZWFyY2h8Mnx8Y3JlYXRpdmUlMjBzdHVkaW8lMjB3b3Jrc3BhY2V8ZW58MXwwfHx8MTc1Njk4NTM2Mnww&ixlib=rb-4.1.0&q=80&w=1080" alt="Artist workspace" class="rounded-lg w-48 h-48 object-cover border-4 border-neutral-900" />
+        <div class="absolute -bottom-6 -right-6 hidden lg:block" data-aos="fade-left" data-aos-once="false">
+          <img src="/denis-cardoso-qSnKHlzJn6c-unsplash.jpg" alt="Artist workspace" class="rounded-lg w-48 h-48 object-cover border-4 border-neutral-900" />
         </div>
         
-        <div class="absolute -top-6 -left-6 hidden lg:block">
-          <img src="https://images.unsplash.com/photo-1621111848501-8d3634f82336?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2MzQ2fDB8MXxzZWFyY2h8M3x8Y3JlYXRpdmUlMjBzdHVkaW8lMjB3b3Jrc3BhY2V8ZW58MXwwfHx8MTc1Njk4NTM2Mnww&ixlib=rb-4.1.0&q=80&w=1080" alt="Modern design workspace" class="rounded-lg w-40 h-40 object-cover border-4 border-neutral-900" />
+        <div class="absolute -top-6 -left-6 hidden lg:block" data-aos="fade-left" data-aos-once="false">
+          <img src="./craig-pattenaude-UukHCVBKBS4-unsplash.jpg" alt="Modern design workspace" class="rounded-lg w-40 h-40 object-cover border-4 border-neutral-900" />
         </div>
       </div>
     </div>
   </div>
 </section>
-<section id="services" class="py-20 bg-neutral-900">
+<section id="services" class="py-20 bg-neutral-900" data-aos="fade-up">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center mb-16">
       <h2 class="text-4xl font-bold text-white mb-4">Services</h2>
@@ -290,51 +197,45 @@
     </div>
     
     <div class="grid md:grid-cols-3 gap-8">
-      <div class="bg-neutral-800 rounded-lg p-8 border border-neutral-700 hover:border-teal-500 transition-all duration-300 group">
-        <img src="https://images.unsplash.com/photo-1603201667493-4c2696de0b1f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2MzQ2fDB8MXxzZWFyY2h8MXx8d2VicGFnZSUyMHByb2Zlc3Npb25hbHxlbnwxfDB8fHwxNzU2OTU4OTA3fDA&ixlib=rb-4.1.0&q=80&w=1080" alt="Professional dubbing setup" class="w-full h-48 object-cover rounded-lg mb-6" />
-        <h3 class="text-2xl font-bold text-white mb-3">Dubbing</h3>
-        <p class="text-neutral-300">Professional voice replacement in 50+ languages with native speakers</p>
+      <div class="bg-neutral-800 rounded-lg p-8 border border-neutral-700 hover:border-teal-500 transition-all duration-300 group" data-aos="flip-left">
+        <img src="./scotty-bussey-hR3OZkYzrWo-unsplash.jpg" alt="Professional dubbing setup" class="w-full h-48 object-cover rounded-lg mb-6" />
+        <h3 class="text-2xl font-bold text-white mb-3">TTS Dubbing</h3>
+        <p class="text-neutral-300">Natural-sounding dubbing with precise lip sync and noise-free mixing.</p>
       </div>
       
-      <div class="bg-neutral-800 rounded-lg p-8 border border-neutral-700 hover:border-teal-500 transition-all duration-300 group">
-        <img src="https://images.unsplash.com/photo-1736580602083-7af2213b19e2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2MzQ2fDB8MXxzZWFyY2h8Mnx8d2VicGFnZSUyMHByb2Zlc3Npb25hbHxlbnwxfDB8fHwxNzU2OTU4OTA3fDA&ixlib=rb-4.1.0&q=80&w=1080" alt="Subtitling workstation" class="w-full h-48 object-cover rounded-lg mb-6" />
+      <div class="bg-neutral-800 rounded-lg p-8 border border-neutral-700 hover:border-teal-500 transition-all duration-300 group" data-aos="flip-left">
+        <img src="./ibrahim-elwakeel-nm11LYaWOtU-unsplash.jpg" alt="Subtitling workstation" class="w-full h-48 object-cover rounded-lg mb-6" />
         <h3 class="text-2xl font-bold text-white mb-3">Subtitling</h3>
         <p class="text-neutral-300">Accurate, timed subtitles that maintain context and cultural relevance</p>
       </div>
       
-      <div class="bg-neutral-800 rounded-lg p-8 border border-neutral-700 hover:border-teal-500 transition-all duration-300 group">
-        <img src="https://images.unsplash.com/photo-1736580602060-e03ad662d4ac?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2MzQ2fDB8MXxzZWFyY2h8M3x8d2VicGFnZSUyMHByb2Zlc3Npb25hbHxlbnwxfDB8fHwxNzU2OTU4OTA3fDA&ixlib=rb-4.1.0&q=80&w=1080" alt="Voice cloning studio" class="w-full h-48 object-cover rounded-lg mb-6" />
+      <div class="bg-neutral-800 rounded-lg p-8 border border-neutral-700 hover:border-teal-500 transition-all duration-300 group" data-aos="flip-left">
+        <img src="./soundtrap-PdO-fDWXQ5I-unsplash.jpg" alt="Voice cloning studio" class="w-full h-48 object-cover rounded-lg mb-6" />
         <h3 class="text-2xl font-bold text-white mb-3">Voice Cloning</h3>
         <p class="text-neutral-300">AI-powered voice replication maintaining your unique tone and style</p>
       </div>
       
-      <div class="bg-neutral-800 rounded-lg p-8 border border-neutral-700 hover:border-teal-500 transition-all duration-300 group">
-        <div class="w-full h-48 bg-neutral-700 rounded-lg mb-6 flex items-center justify-center">
-          <div class="text-teal-400 text-6xl">🌍</div>
-        </div>
+      <div class="bg-neutral-800 rounded-lg p-8 border border-neutral-700 hover:border-teal-500 transition-all duration-300 group" data-aos="flip-left">
+        <img src="./z-TrhLCn1abMU-unsplash.jpg" alt="Localization" class="w-full h-48 object-cover rounded-lg mb-6" />
         <h3 class="text-2xl font-bold text-white mb-3">Localization</h3>
         <p class="text-neutral-300">Cultural adaptation beyond translation for global audiences</p>
       </div>
       
-      <div class="bg-neutral-800 rounded-lg p-8 border border-neutral-700 hover:border-teal-500 transition-all duration-300 group">
-        <div class="w-full h-48 bg-neutral-700 rounded-lg mb-6 flex items-center justify-center">
-          <div class="text-teal-400 text-6xl">🎭</div>
-        </div>
+      <div class="bg-neutral-800 rounded-lg p-8 border border-neutral-700 hover:border-teal-500 transition-all duration-300 group" data-aos="flip-left">
+        <img src="./lidya-nada-_0aKQa9gr4s-unsplash.jpg" alt="Emotion control" class="w-full h-48 object-cover rounded-lg mb-6" />
         <h3 class="text-2xl font-bold text-white mb-3">Emotion Control</h3>
         <p class="text-neutral-300">Fine-tune emotional delivery for perfect audience connection</p>
       </div>
       
-      <div class="bg-neutral-800 rounded-lg p-8 border border-neutral-700 hover:border-teal-500 transition-all duration-300 group">
-        <div class="w-full h-48 bg-neutral-700 rounded-lg mb-6 flex items-center justify-center">
-          <div class="text-teal-400 text-6xl">⚡</div>
-        </div>
+      <div class="bg-neutral-800 rounded-lg p-8 border border-neutral-700 hover:border-teal-500 transition-all duration-300 group" data-aos="flip-left">
+        <img src="./hand-holds-neon-logo-fast-delivery-3d-render-illustration_567294-2853.jpg" alt="Fast delivery" class="w-full h-48 object-cover rounded-lg mb-6" />
         <h3 class="text-2xl font-bold text-white mb-3">Express Delivery</h3>
-        <p class="text-neutral-300">24-48 hour turnaround for urgent project needs</p>
+        <p class="text-neutral-300">Fast turnaround for urgent project needs</p>
       </div>
     </div>
   </div>
 </section>
-<section id="portfolio" class="py-20 md:py-32 bg-neutral-900">
+<section id="portfolio" class="py-20 md:py-32 bg-neutral-900" data-aos="fade-up">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center mb-16">
       <h2 class="text-4xl md:text-5xl font-bold text-white mb-4">Portfolio</h2>
@@ -345,7 +246,7 @@
 
     <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
       <!-- Sample 1 -->
-      <div class="group relative overflow-hidden rounded-lg bg-black cursor-pointer" onclick="openVideoModal('video1')">
+      <div class="group relative overflow-hidden rounded-lg bg-black cursor-pointer" onclick="openVideoModal('DyY-gNeKYVI?si=ZltbpCv3J5qU7S_v')" data-aos="flip-left">
         <img src="https://images.unsplash.com/photo-1603201667493-4c2696de0b1f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2MzQ2fDB8MXxzZWFyY2h8MXx8d2VicGFnZSUyMHByb2Zlc3Npb25hbHxlbnwxfDB8fHwxNzU2OTU4OTA3fDA&ixlib=rb-4.1.0&q=80&w=1080" alt="Professional content creator workspace" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300">
         <div class="absolute inset-0 bg-black/50 group-hover:bg-black/30 transition-colors duration-300"></div>
         <div class="absolute inset-0 flex items-center justify-center">
@@ -360,7 +261,7 @@
       </div>
 
       <!-- Sample 2 -->
-      <div class="group relative overflow-hidden rounded-lg bg-black cursor-pointer" onclick="openVideoModal('video2')">
+      <div class="group relative overflow-hidden rounded-lg bg-black cursor-pointer" onclick="openVideoModal('DyY-gNeKYVI?si=ZltbpCv3J5qU7S_v')" data-aos="flip-left">
         <img src="https://images.unsplash.com/photo-1736580602083-7af2213b19e2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2MzQ2fDB8MXxzZWFyY2h8Mnx8d2VicGFnZSUyMHByb2Zlc3Npb25hbHxlbnwxfDB8fHwxNzU2OTU4OTA3fDA&ixlib=rb-4.1.0&q=80&w=1080" alt="Professional setup" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300">
         <div class="absolute inset-0 bg-black/50 group-hover:bg-black/30 transition-colors duration-300"></div>
         <div class="absolute inset-0 flex items-center justify-center">
@@ -375,7 +276,7 @@
       </div>
 
       <!-- Sample 3 -->
-      <div class="group relative overflow-hidden rounded-lg bg-black cursor-pointer" onclick="openVideoModal('video3')">
+      <div class="group relative overflow-hidden rounded-lg bg-black cursor-pointer" onclick="openVideoModal('DyY-gNeKYVI?si=ZltbpCv3J5qU7S_v')" data-aos="flip-left">
         <img src="https://images.unsplash.com/photo-1736580602060-e03ad662d4ac?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2MzQ2fDB8MXxzZWFyY2h8M3x8d2VicGFnZSUyMHByb2Zlc3Npb25hbHxlbnwxfDB8fHwxNzU2OTU4OTA3fDA&ixlib=rb-4.1.0&q=80&w=1080" alt="Creative workspace" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300">
         <div class="absolute inset-0 bg-black/50 group-hover:bg-black/30 transition-colors duration-300"></div>
         <div class="absolute inset-0 flex items-center justify-center">
@@ -390,7 +291,7 @@
       </div>
 
       <!-- Sample 4 -->
-      <div class="group relative overflow-hidden rounded-lg bg-black cursor-pointer" onclick="openVideoModal('video4')">
+      <div class="group relative overflow-hidden rounded-lg bg-black cursor-pointer" onclick="openVideoModal('DyY-gNeKYVI?si=ZltbpCv3J5qU7S_v')" data-aos="flip-left">
         <div class="w-full h-64 bg-gradient-to-br from-[#14b8a6]/20 to-[#14b8a6]/5 flex items-center justify-center">
           <div class="text-center">
             <svg class="w-16 h-16 text-[#14b8a6] mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -420,46 +321,33 @@
       </div>
     </div>
   </div>
-
-  <script>
-    function openVideoModal(videoId) {
-      document.getElementById('videoModal').classList.remove('hidden');
-      document.body.style.overflow = 'hidden';
-    }
-
-    function closeVideoModal() {
-      document.getElementById('videoModal').classList.add('hidden');
-      document.body.style.overflow = '';
-    }
-
-    document.addEventListener('keydown', function(e) {
-      if (e.key === 'Escape') {
-        closeVideoModal();
-      }
-    });
-  </script>
 </section>
-<section id="testimonials" class="py-20 md:py-32 bg-black">
+<section id="testimonials" class="py-20 md:py-32 bg-black" data-aos="fade-up">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center mb-16">
       <h2 class="text-4xl md:text-5xl font-bold text-white mb-4">Testimonials</h2>
-      <p class="text-xl text-neutral-400">Trusted by creators worldwide</p>
+      <p class="text-xl text-neutral-400">What My Clients Say?</p>
     </div>
 
     <!-- Full-width Testimonial Carousel -->
     <div class="relative w-full overflow-hidden">
-      <div class="flex gap-8 animate-scroll hover:[animation-play-state:paused]">
+        <!-- Left blur -->
+        <div class="testimonial-blur-left pointer-events-none absolute left-0 top-0 h-full w-32 bg-gradient-to-r from-black to-transparent z-10"></div>
+        <!-- Right blur -->
+        <div class="testimonial-blur-right pointer-events-none absolute right-0 top-0 h-full w-32 bg-gradient-to-l from-black to-transparent z-10"></div>
+
+      <div class="flex gap-8 animate-scroll">
         <!-- Testimonial 1 -->
         <div class="flex-shrink-0 w-96 bg-neutral-900 border border-neutral-800 rounded-lg p-8">
           <div class="flex items-center mb-6">
             <div class="w-12 h-12 rounded-full bg-[#14b8a6]/20 flex items-center justify-center text-[#14b8a6] font-bold">SM</div>
             <div class="ml-4">
-              <h4 class="text-white font-semibold">Sarah Martinez</h4>
-              <p class="text-neutral-400 text-sm">Tech YouTuber, 2.5M subs</p>
+              <h4 class="text-white font-semibold">Sun Bae</h4>
+              <p class="text-neutral-400 text-sm">Deputy Team Leader, AI Operations Team (AI Dubbing Production)<br><span font="font-bold">Iyuno</span></p>
             </div>
           </div>
           <blockquote class="text-neutral-300 leading-relaxed">
-            "Sidvibe transformed my channel with Spanish dubbing. My Spanish audience grew 300% in 3 months. Professional quality, fast turnaround."
+            “It was a true pleasure collaborating with Siddhant. He consistently demonstrated a strong commitment and passion for delivering the best quality in both translation and AI Dubbing. His meticulous attention to detail and professionalism ensured outstanding results across AI Dubbing projects. Siddhant is also highly collaborative and open-minded, which allowed workflows to run smoothly and efficiently. I truly hope to have the opportunity to work with him again in the future.”
           </blockquote>
           <div class="mt-4 text-[#14b8a6]">★★★★★</div>
         </div>
@@ -469,27 +357,12 @@
           <div class="flex items-center mb-6">
             <div class="w-12 h-12 rounded-full bg-[#14b8a6]/20 flex items-center justify-center text-[#14b8a6] font-bold">JD</div>
             <div class="ml-4">
-              <h4 class="text-white font-semibold">James Davis</h4>
-              <p class="text-neutral-400 text-sm">Gaming Creator, 1.8M subs</p>
+              <h4 class="text-white font-semibold">Kate (Sujung) Yang</h4>
+              <p class="text-neutral-400 text-sm">Director of AI Operations <br><span font="font-bold">Iyuno</span></p>
             </div>
           </div>
           <blockquote class="text-neutral-300 leading-relaxed">
-            "The French subtitles opened up an entire new market. Quality is exceptional, timing is perfect. Highly recommend Sidvibe."
-          </blockquote>
-          <div class="mt-4 text-[#14b8a6]">★★★★★</div>
-        </div>
-
-        <!-- Testimonial 3 -->
-        <div class="flex-shrink-0 w-96 bg-neutral-900 border border-neutral-800 rounded-lg p-8">
-          <div class="flex items-center mb-6">
-            <div class="w-12 h-12 rounded-full bg-[#14b8a6]/20 flex items-center justify-center text-[#14b8a6] font-bold">EL</div>
-            <div class="ml-4">
-              <h4 class="text-white font-semibold">Emma Liu</h4>
-              <p class="text-neutral-400 text-sm">Lifestyle Vlogger, 950K subs</p>
-            </div>
-          </div>
-          <blockquote class="text-neutral-300 leading-relaxed">
-            "Voice cloning blew my mind. My German audience thinks I actually speak German. Unreal quality and authenticity."
+            “I had the pleasure of working with Siddhant, whose professionalism and dedication have always stood out. With his years of experience as a translator, he took full ownership of his work and was instrumental in helping us manage our Hindi workload and deliver on important projects and POCs. Beyond his skills, he has been a cooperative and reliable teammate, making a lasting impact on our team. I’m confident he will continue to excel in his freelance journey and highly recommend him.”
           </blockquote>
           <div class="mt-4 text-[#14b8a6]">★★★★★</div>
         </div>
@@ -499,86 +372,74 @@
           <div class="flex items-center mb-6">
             <div class="w-12 h-12 rounded-full bg-[#14b8a6]/20 flex items-center justify-center text-[#14b8a6] font-bold">SM</div>
             <div class="ml-4">
-              <h4 class="text-white font-semibold">Sarah Martinez</h4>
-              <p class="text-neutral-400 text-sm">Tech YouTuber, 2.5M subs</p>
+              <h4 class="text-white font-semibold">Sun Bae</h4>
+              <p class="text-neutral-400 text-sm">Deputy Team Leader, AI Operations Team (AI Dubbing Production)<br><span font="font-bold">Iyuno</span></p>
             </div>
           </div>
           <blockquote class="text-neutral-300 leading-relaxed">
-            "Sidvibe transformed my channel with Spanish dubbing. My Spanish audience grew 300% in 3 months. Professional quality, fast turnaround."
+            “It was a true pleasure collaborating with Siddhant. He consistently demonstrated a strong commitment and passion for delivering the best quality in both translation and AI Dubbing. His meticulous attention to detail and professionalism ensured outstanding results across AI Dubbing projects. Siddhant is also highly collaborative and open-minded, which allowed workflows to run smoothly and efficiently. I truly hope to have the opportunity to work with him again in the future.”
           </blockquote>
           <div class="mt-4 text-[#14b8a6]">★★★★★</div>
         </div>
 
+        <!-- Testimonial 2 -->
         <div class="flex-shrink-0 w-96 bg-neutral-900 border border-neutral-800 rounded-lg p-8">
           <div class="flex items-center mb-6">
             <div class="w-12 h-12 rounded-full bg-[#14b8a6]/20 flex items-center justify-center text-[#14b8a6] font-bold">JD</div>
             <div class="ml-4">
-              <h4 class="text-white font-semibold">James Davis</h4>
-              <p class="text-neutral-400 text-sm">Gaming Creator, 1.8M subs</p>
+              <h4 class="text-white font-semibold">Kate (Sujung) Yang</h4>
+              <p class="text-neutral-400 text-sm">Director of AI Operations <br><span font="font-bold">Iyuno</span></p>
             </div>
           </div>
           <blockquote class="text-neutral-300 leading-relaxed">
-            "The French subtitles opened up an entire new market. Quality is exceptional, timing is perfect. Highly recommend Sidvibe."
-          </blockquote>
-          <div class="mt-4 text-[#14b8a6]">★★★★★</div>
-        </div>
-
-        <div class="flex-shrink-0 w-96 bg-neutral-900 border border-neutral-800 rounded-lg p-8">
-          <div class="flex items-center mb-6">
-            <div class="w-12 h-12 rounded-full bg-[#14b8a6]/20 flex items-center justify-center text-[#14b8a6] font-bold">EL</div>
-            <div class="ml-4">
-              <h4 class="text-white font-semibold">Emma Liu</h4>
-              <p class="text-neutral-400 text-sm">Lifestyle Vlogger, 950K subs</p>
-            </div>
-          </div>
-          <blockquote class="text-neutral-300 leading-relaxed">
-            "Voice cloning blew my mind. My German audience thinks I actually speak German. Unreal quality and authenticity."
+            “I had the pleasure of working with Siddhant, whose professionalism and dedication have always stood out. With his years of experience as a translator, he took full ownership of his work and was instrumental in helping us manage our Hindi workload and deliver on important projects and POCs. Beyond his skills, he has been a cooperative and reliable teammate, making a lasting impact on our team. I’m confident he will continue to excel in his freelance journey and highly recommend him.”
           </blockquote>
           <div class="mt-4 text-[#14b8a6]">★★★★★</div>
         </div>
       </div>
     </div>
-
-    <style>
-      @keyframes scroll {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(-50%); }
-      }
-      .animate-scroll {
-      animation: scroll 50s linear infinite;
-      }
-
-    </style>
   </div>
 </section>
-<section id="contact" class="py-20 md:py-32 bg-neutral-900">
-  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+<section id="contact" class="py-20 md:py-32 bg-neutral-900" data-aos="fade-up">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center mb-16">
       <h2 class="text-4xl md:text-5xl font-bold text-white mb-4">Contact</h2>
       <p class="text-xl text-neutral-400">Ready to reach global audiences?</p>
     </div>
 
     <div class="grid lg:grid-cols-2 gap-12 items-center">
-      <div class="space-y-6">
-        <img src="https://images.unsplash.com/photo-1586115752989-c6d507e1f125?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2MzQ2fDB8MXxzZWFyY2h8MXx8bmVvbiUyMGNvbnRhY3QlMjBkZXNrfGVufDF8MHx8fDE3NTcwNTY1Mjh8MA&ixlib=rb-4.1.0&q=80&w=1080" alt="Neon contact desk" class="w-full h-64 object-cover rounded-lg">
-        <img src="https://images.unsplash.com/photo-1660634478406-f915f5dda4c5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2MzQ2fDB8MXxzZWFyY2h8Mnx8bmVvbiUyMGNvbnRhY3QlMjBkZXNrfGVufDF8MHx8fDE3NTcwNTY1Mjh8MA&ixlib=rb-4.1.0&q=80&w=1080" alt="Professional workspace" class="w-full h-48 object-cover rounded-lg">
-        <img src="https://images.unsplash.com/photo-1665968619277-359eff9988d2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2MzQ2fDB8MXxzZWFyY2h8M3x8bmVvbiUyMGNvbnRhY3QlMjBkZXNrfGVufDF8MHx8fDE3NTcwNTY1Mjh8MA&ixlib=rb-4.1.0&q=80&w=1080" alt="Modern computer setup" class="w-full h-32 object-cover rounded-lg">
+      <!-- Left Side CTA -->
+      <div class="text-center lg:text-left space-y-6">
+        <h3 class="text-3xl font-bold text-teal-400">Let’s Create Something Amazing</h3>
+        <p class="text-lg text-neutral-300 leading-relaxed">
+          Whether you’re a creator, brand, or storyteller—your content deserves to be heard in every language.  
+          Partner with <span class="text-teal-400 font-semibold">Sidvibe</span> for studio-quality dubbing & subtitling that connects you with the world.  
+        </p>
+        <ul class="space-y-3 text-neutral-400">
+          <li>Studio-Quality Dubbing</li>
+          <li>Engaging Subtitles</li>
+          <li>Express Delivery</li>
+        </ul>
+        <p class="text-xl font-semibold text-white">
+          Don’t just translate. <span class="text-teal-400">Captivate.</span>
+        </p>
       </div>
 
-      <form action="https://formspree.io/f/mnnborge" method="POST" class="space-y-6" id="contactForm">
+      <!-- Right Side Contact Form -->
+      <form action="https://formspree.io/f/mnnborge" method="POST" class="space-y-6 w-full max-w-lg mx-auto" id="contactForm">
         <div>
           <label for="name" class="block text-sm font-medium text-neutral-300 mb-2">Name</label>
-          <input type="text" id="name" name="name" required class="w-full px-4 py-3 bg-neutral-800 border border-neutral-700 rounded-lg text-white placeholder-neutral-500 focus:border-[#14b8a6] focus:outline-none transition-colors">
+          <input type="text" id="name" name="name" required class="w-full px-4 py-3 bg-neutral-800 border border-neutral-700 rounded-lg text-white placeholder-neutral-500 focus:border-[#14b8a6] focus:outline-none transition-colors" placeholder="John Doe">
         </div>
 
         <div>
           <label for="email" class="block text-sm font-medium text-neutral-300 mb-2">Email</label>
-          <input type="email" id="email" name="email" required class="w-full px-4 py-3 bg-neutral-800 border border-neutral-700 rounded-lg text-white placeholder-neutral-500 focus:border-[#14b8a6] focus:outline-none transition-colors">
+          <input type="email" id="email" name="email" required class="w-full px-4 py-3 bg-neutral-800 border border-neutral-700 rounded-lg text-white placeholder-neutral-500 focus:border-[#14b8a6] focus:outline-none transition-colors" placeholder="John.Doe@gmail.com">
         </div>
 
         <div>
           <label for="message" class="block text-sm font-medium text-neutral-300 mb-2">Message</label>
-          <textarea id="message" name="message" rows="4" required class="w-full px-4 py-3 bg-neutral-800 border border-neutral-700 rounded-lg text-white placeholder-neutral-500 focus:border-[#14b8a6] focus:outline-none transition-colors resize-none"></textarea>
+          <textarea id="message" name="message" rows="4" required class="w-full px-4 py-3 bg-neutral-800 border border-neutral-700 rounded-lg text-white placeholder-neutral-500 focus:border-[#14b8a6] focus:outline-none transition-colors resize-none" placeholder="Enter your message"></textarea>
         </div>
 
         <button type="submit" class="w-full bg-[#14b8a6] hover:bg-[#0d9488] text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105">
@@ -587,44 +448,8 @@
       </form>
     </div>
   </div>
-  <script>
-  document.getElementById('contactForm').addEventListener('submit', async function(e) {
-    e.preventDefault();
-    
-    const form = this;
-    const formData = new FormData(form);
-    
-    const response = await fetch(form.action, {
-      method: form.method,
-      body: formData,
-      headers: { 'Accept': 'application/json' }
-    });
-
-    const button = form.querySelector('button[type="submit"]');
-    const originalText = button.textContent;
-
-    if (response.ok) {
-      console.log('✅ Form submitted successfully');
-      form.reset();
-      button.textContent = 'Sent!';
-      button.classList.add('bg-green-600');
-      setTimeout(() => {
-        button.textContent = originalText;
-        button.classList.remove('bg-green-600');
-      }, 2000);
-    } else {
-      console.error('❌ Submission failed');
-      button.textContent = 'Error!';
-      button.classList.add('bg-red-600');
-      setTimeout(() => {
-        button.textContent = originalText;
-        button.classList.remove('bg-red-600');
-      }, 2000);
-    }
-  });
-  </script>
 </section>
-<footer id="footer" class="bg-neutral-900 border-t border-neutral-800 py-12">
+<footer id="footer" class="bg-neutral-900 border-t border-neutral-800 py-12" data-aos="fade-up">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
       <!-- Brand Info -->
@@ -667,9 +492,8 @@
         <h3 class="text-white font-semibold mb-4">Support</h3>
         <ul class="space-y-2">
           <li><a href="#contact" class="text-neutral-400 hover:text-[#14b8a6] transition-colors text-sm">Contact</a></li>
-          <li><a href="#faq" class="text-neutral-400 hover:text-[#14b8a6] transition-colors text-sm">FAQ</a></li>
-          <li><a href="#privacy" class="text-neutral-400 hover:text-[#14b8a6] transition-colors text-sm">Privacy Policy</a></li>
-          <li><a href="#terms" class="text-neutral-400 hover:text-[#14b8a6] transition-colors text-sm">Terms of Service</a></li>
+          <li><a href="faq.html" class="text-neutral-400 hover:text-[#14b8a6] transition-colors text-sm">FAQ</a></li>
+          <li><a href="privacy.html" class="text-neutral-400 hover:text-[#14b8a6] transition-colors text-sm">Privacy Policy</a></li>
         </ul>
       </div>
 
@@ -691,53 +515,7 @@
     </div>
   </div>
 </footer></div></mountpoint>
-
-      <!-- Core functionality scripts -->
-      <script>
-        // Initialize interactive elements
-
-        document.addEventListener('DOMContentLoaded', function() {
-          // Add interactive behaviors
-          const interactiveElements = document.querySelectorAll('.interactive-element');
-          interactiveElements.forEach(element => {
-            element.addEventListener('mouseenter', () => {
-              element.classList.add('hover');
-            });
-            element.addEventListener('mouseleave', () => {
-              element.classList.remove('hover');
-            });
-          });
-
-          // Initialize any dynamic content
-          const dynamicContent = document.querySelectorAll('[data-dynamic]');
-          dynamicContent.forEach(content => {
-            // Add fade-in animation
-            content.classList.add('fade-in');
-          });
-        });
-
-        // Handle navigation
-        function handleNavigation(event) {
-          const link = event.currentTarget;
-          if (link.hasAttribute('data-nav')) {
-            event.preventDefault();
-            const target = link.getAttribute('data-nav');
-            document.querySelector(target).scrollIntoView({ behavior: 'smooth' });
-          }
-        }
-
-        // Initialize navigation
-        document.querySelectorAll('[data-nav]').forEach(link => {
-          link.addEventListener('click', handleNavigation);
-        });
-      </script>
-
-      <!-- Body Scripts -->
-      <script id="body-scripts">
-        // This script tag will be replaced with actual scripts.body content
-        if (window.scripts && window.scripts.body) {
-          document.getElementById('body-scripts').outerHTML = window.scripts.body;
-        }
-      </script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+      <script src="script.js"></script>
    </body>
 </html>

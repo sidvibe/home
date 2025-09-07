@@ -1,0 +1,206 @@
+        
+
+html {
+          scroll-behavior: smooth;
+        }
+
+        :root {
+          --primary-color: #14b8a6;
+          --secondary-color: #ffffff;
+          --accent-color: ;
+        }
+
+        /* Strict no-scrollbar rules */
+        * {
+          -ms-overflow-style: none !important;  /* IE and Edge */
+          scrollbar-width: none !important;     /* Firefox */
+        }
+        *::-webkit-scrollbar {
+          display: none !important;             /* Chrome, Safari and Opera */
+        }
+
+        /* Typography */
+        h1, h2, h3, h4, h5, h6 {
+          font-family: Inter, Inter, system-ui, sans-serif;
+        }
+        body {
+          font-family: Roboto, Inter, system-ui, sans-serif;
+        }
+
+        .nav-btn {
+            margin-left: 10px;
+      background-color: #14b8a6;
+      color: white;
+      padding: 12px;
+      padding-left: 18px;
+      padding-right: 18px;
+      border-radius: 0.25rem;
+      flex-direction:column;
+      cursor: pointer;
+      transition: all 0.3s ease;
+        }
+
+        .typewrap{
+      font-size: 1rem;
+      line-height: 0.5em;;
+      display:flex;
+      align-items:center;
+      justify-content: center;
+      gap:0.5rem;
+    }
+
+    .typed-text{
+      white-space:nowrap;
+      overflow:hidden; /* helps with pure-CSS variants if needed */
+      font-weight: 550;
+    }
+
+    @media only screen and (max-width: 640px) {
+      #typing {
+    white-space: normal !important;
+    word-break: break-word;
+    text-align: center;
+        }
+    }
+
+
+    /* blinking cursor */
+    .cursor{
+      display:inline-block;
+      width:1px;
+      height:1.2em;
+      background:var(--accent);
+      border-radius:2px;
+      transform-origin: center;
+      animation: blink 1s steps(2, start) infinite;
+      margin-left:2px;
+      color: #14b8a6;
+    }
+
+
+
+    @keyframes blink{
+      0%, 50% { opacity:1; transform: scaleY(1); }
+      51%, 100% { opacity:0; transform: scaleY(0.2); }
+    }
+
+    /* small, optional fade when text changes (makes the delete/typing feel softer) */
+    .fade {
+      transition: opacity 140ms linear;
+    }
+
+    /* Responsive tweaks - already mostly fluid due to clamp */
+    @media (max-width:420px){
+      .typewrap{ padding:0.5rem; border-radius:10px; }
+    }
+
+        /* Interactive elements */
+        .interactive-element {
+          transition: all 0.3s ease;
+        }
+        .interactive-element:hover {
+          transform: translateY(-2px);
+        }
+
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+          width: 8px;
+          height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+          background: #f1f1f1;
+        }
+        ::-webkit-scrollbar-thumb {
+          background: #888;
+          border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+          background: #555;
+        }
+
+.get-started {
+    margin-left: 15px;
+      background-color: #14b8a6;
+      color: white;
+      padding: 20px;
+      flex-direction:column;
+      cursor: pointer;
+      transition: all 0.3s ease;
+}
+
+.action-button {
+      margin-left: 15px;
+      background-color: whitesmoke;
+      padding: 20px;
+      flex-direction:column;
+      cursor: pointer;
+      transition: all 0.3s ease;
+}
+        /* Animations */
+        @keyframes fadeIn {
+          from { opacity: 0; }
+          to { opacity: 1; }
+        }
+        .fade-in {
+          animation: fadeIn 0.5s ease-in-out;
+        }
+
+        @keyframes scroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+      }
+      .animate-scroll {
+        animation: scroll 25s linear infinite;
+        will-change: transform;
+}
+
+/* Testimonials: on mobile, disable automatic animation and allow swipe */
+@media (max-width: 768px) {
+  .animate-scroll {
+    animation: none !important;           /* stop auto scroll on phones */
+    overflow-x: auto;                     /* allow horizontal swipe */
+    -webkit-overflow-scrolling: touch;    /* smooth native scrolling on iOS */
+    padding-bottom: 0.75rem;              /* visual breathing room */
+  }
+  .animate-scroll > * { flex: 0 0 auto; } /* each card remains natural width */
+  /* hide blur overlays on small screens */
+  .testimonial-blur-left,
+  .testimonial-blur-right { display: none; }
+}
+
+
+
+/* --------------------------
+   Mobile-specific fixes
+   -------------------------- */
+@media (max-width: 640px) {
+  /* typing container: allow wrap and avoid overflow */
+  .typewrap { padding-left: 0.75rem; padding-right: 0.75rem; }
+  .typed-text, #typed {
+    white-space: normal !important;
+    word-break: break-word;
+    overflow: visible !important;
+    display: inline-block;
+    max-width: 100%;
+    font-size: 0.95rem; /* slightly smaller on phones */
+    line-height: 1.1;
+    text-align: center;
+  }
+
+  /* hero buttons: ensure side-by-side on mobile */
+  .hero-buttons { display:flex; gap:0.5rem; align-items:center; }
+  .hero-buttons > a { width: 50%; }
+  .hero-buttons .get-started,
+  .hero-buttons .action-button { margin: 0; }
+
+  /* keep large hero heading from overflowing on small screens */
+  #hero h1, #hero .leading-tight {
+    overflow-wrap: break-word;
+    word-break: break-word;
+  }
+}
+
+/* ensure we don't touch desktop layout */
+@media (min-width: 641px) {
+  .hero-buttons > a { width: auto; }
+}
